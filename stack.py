@@ -47,6 +47,10 @@ class Stack:
 	
 	
 	def clear(self):
+		# if can use garbage collector
+		self.top = FALSE
+
+		# if not can use garbage collector
 		while not self.isEmpty():
 			self.pop()
 		
