@@ -1,16 +1,16 @@
 class Node:
-	def __init__(self):
-		self.data = FALSE
-		self.next = FALSE
+	def __init__(self, data):
+		self.data = data
+		self.next = None
 
 class Stack:
 	def __init__(self):
-		self.top = FALSE
+		self.top = False
 	
 	def isEmpty(self):
 		if not self:
-			return TRUE
-		return FALSE`
+			return True
+		return False
 	
 	def __len__(self):
 		
@@ -24,31 +24,31 @@ class Stack:
 		
 	def __contains(item):
 		if item in self:
-			return TRUE
+			return True
 		
-		return FALSE
+		return False ,
 		
 	def __add__(self, other):
 		if not other:
-			return FALSE
+			return False
 			
-		new_stack = new Stack()
+		new_stack = Stack()
 		new_stack.push(self)
 		new_stack.push(other)
 		return new_stack
 		
 	def __eq__(self, other):
 		if not other:
-			return FALSE
+			return False
 			
 		if self == other:
-			return TRUE
+			return True
 		
 	
 	
 	def clear(self):
 		# if can use garbage collector
-		self.top = FALSE
+		self.top = False
 
 		# if not can use garbage collector
 		while not self.isEmpty():
@@ -59,10 +59,10 @@ class Stack:
 			return self.top
 			
 		else:
-			raise KeyError("Stack is Empty)
+			raise KeyError("Stack is Empty")
 		
 	def push(self, item):
-		new_top = new Node()
+		new_top = Node()
 		new_top.data = item
 		new_top.next = self.top
 		self.top = new_top
